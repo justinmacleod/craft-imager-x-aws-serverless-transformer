@@ -1,5 +1,10 @@
 # AWS Serverless Image Handler transformer for Imager X Changelog
 
+## 3.0.2 - 2024-04-29
+
+### Fixed
+- Fixed an issue with double slashes (thanks, @samuelbirch).
+
 ## 3.0.1 - 2024-04-26
 
 ### Fixed
