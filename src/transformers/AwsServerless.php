@@ -91,6 +91,11 @@ class AwsServerless extends Component implements TransformerInterface
 
         $requestParams['key'] = AwsServerlessHelpers::getImageKey($image);
 
+        // Add dateUpdated timestamp to cache-bust transformed URLs when the asset changes
+        if ($image->dateUpdated) {
+            $requestParams['dateUpdated'] = $image->dateUpdated->getTimestamp();
+        }
+
         $edits = [
             'resize' => $transformerParams['resize'] ?? []
         ];
